@@ -25,6 +25,9 @@ Any version of beaver builder.
 
 == Change Log ==
 
+= 1.0.2 =
+Added pagination typography and toggle section in the typography settings tab.
+
 = 1.0.1 =
 Fixed the plugin updater class in the main plugin php file.
 
