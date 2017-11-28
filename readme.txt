@@ -25,6 +25,9 @@ Any version of beaver builder.
 
 == Change Log ==
 
+= 1.0.3 =
+Added typography css of the pagination.
+
 = 1.0.2 =
 Added pagination typography and toggle section in the typography settings tab.
 
