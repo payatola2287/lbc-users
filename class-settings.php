@@ -87,7 +87,8 @@ class LBCUSettings{
                 'default' => 'yes',
                 'toggle' => array(
                   'yes' => array(
-                    'tabs' => array( 'pagination-tab' )
+                    'tabs' => array( 'pagination-tab' ),
+                    'sections' => array( 'pagination-typo-section' )
                   )
                 )
               )
