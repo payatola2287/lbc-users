@@ -2,13 +2,13 @@
 /**
  * Plugin Name: Life|Brand Collective User List Add on
  * Description: Add-on for beaver builder to display members.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Paolo Gallardo
  * Author URI: http://www.paologallardo.com
  */
 
  require 'plugin-update-checker/plugin-update-checker.php';
- $myUpdateChecker = Puc_v4p3_Factory::buildUpdateChecker(
+ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
  	'https://github.com/payatola2287/lbc-users',
  	__FILE__,
  	'lbc-users'

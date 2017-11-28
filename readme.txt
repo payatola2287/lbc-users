@@ -22,3 +22,13 @@ Beaver builder module that lists all subscriber in a wordpress website installat
 = What version of beaver do I need for this to work? =
 
 Any version of beaver builder.
+
+== Change Log ==
+
+= 1.0.1 =
+Fixed the plugin updater class in the main plugin php file.
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Php class not found. you need to upgrade for better execution.
