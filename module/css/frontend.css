@@ -1,0 +1,35 @@
+.user-name,
+.user-button{
+  display: inline-block;
+}
+
+.users-list{
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.user-box{
+  width: 33%;
+}
+.user-name{
+  margin: 0;
+}
+.user-button-wrapper.left{
+  text-align: left;
+}
+.user-button-wrapper.right{
+  text-align: right;
+}
+.user-button{
+  text-decoration: none;
+}
+.user-button-wrapper.center{
+  text-align: center;
+}
