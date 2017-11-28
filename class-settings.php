@@ -355,6 +355,26 @@ class LBCUSettings{
                 'label' => __( 'Line Height','fl-builder' )
               )
             )
+          ),
+          'pagination-typo-section' => array(
+            'title' => __( 'Pagination','fl-builder' ),
+            'fields' => array(
+              'pagination_font_fam' => array(
+                'type' => 'font',
+                'default' => 'Default',
+                'label' => __( 'Font','fl-builder' )
+              ),
+              'pagination_font_size' => array(
+                'type' => 'text',
+                'default' => '16px',
+                'label' => __( 'Font size' )
+              ),
+              'pagination_line_height' => array(
+                'type' => 'text',
+                'default' => '1.3',
+                'label' => __( 'Line Height','fl-builder' )
+              )
+            )
           )
         )
       ),
