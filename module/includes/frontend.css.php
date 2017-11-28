@@ -95,6 +95,14 @@ transition: color 0.3s linear, background 0.3s ease-in;
   border-width: <?php echo $settings->pagination_border_width; ?>;
   border-color: <?php echo $settings->pagination_border_color; ?>;
   border-radius: <?php echo $settings->pagination_border_radius; ?>;
+  <?php if( 'Default' != $settings->pagination_font_fam['family'] ): ?>
+    font-family: <?php echo $settings->pagination_font_fam['family']; ?>;
+  <?php endif; ?>
+  <?php if( 'Default' != $settings->pagination_font_fam['weight'] ): ?>
+    font-weight: <?php echo $settings->pagination_font_fam['weight']; ?>;
+  <?php endif; ?>
+  font-size: <?php echo $settings->pagination_font_size; ?>;
+  line-height: <?php echo $settings->pagination_line_height; ?>;
 }
 .fl-node-<?php echo $id; ?> .page-numbers:hover{
   background-color: #<?php echo $settings->pagination_bg_hover_color; ?>;
