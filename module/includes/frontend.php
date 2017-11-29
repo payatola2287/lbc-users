@@ -1,7 +1,7 @@
 <?php
   $paged = get_query_var('paged');
   $users = get_users( array(
-    'fields' => array( 'ID' ),
+    'fields' => array( 'ID','user_email' ),
     'role' => 'subscriber',
     'number' => $settings->per_page,
     'offset' => $paged ? ($paged - 1) * $settings->per_page : 0
@@ -39,7 +39,7 @@
   ?>
     <li class="user-box">
       <?php if( 'box' == $settings->link_type ): ?>
-          <a href="#" title="Go to profile">
+          <a href="<?php echo trailingslashit( get_site_url() ) . 'profile/?email=' . $user->user_email ; ?>" title="Go to profile">
       <?php endif; ?>
       <<?php echo $settings->name_tag; ?> class="user-name"><?php echo $user_meta[ 'first_name' ][0] . ' ' . $user_meta[ 'last_name' ][0]; ?></<?php echo $settings->name_tag; ?>>
       <?php if( 'yes' == $settings->mem_content ): ?>
@@ -49,7 +49,7 @@
       <?php endif; ?>
       <?php if( 'button' == $settings->link_type ): ?>
         <div class="user-button-wrapper <?php echo $settings->button_align; ?>">
-          <a href="#" title="go to profile" class="user-button">
+          <a href="<?php echo trailingslashit( get_site_url() ) . 'profile/?email=' . $user->user_email ; ?>" title="go to profile" class="user-button">
             <span class="user-button-text"><?php echo $settings->button_text; ?></span>
           </a>
         </div>
