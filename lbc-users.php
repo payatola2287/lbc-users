@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Life|Brand Collective User List Add on
+ * Plugin Name: User List Add on
  * Description: Add-on for beaver builder to display members.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Paolo Gallardo
  * Author URI: http://www.paologallardo.com
  */
