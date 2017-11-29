@@ -4,7 +4,7 @@ class LBCUModuleClass extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'            => __( 'Life|Brand Members List Module', 'fl-builder' ),
+            'name'            => __( 'Members List Module', 'fl-builder' ),
             'description'     => __( '', 'fl-builder' ),
             'category'        => __( 'Advanced Modules', 'fl-builder' ),
             'dir'             => LBCU_MODULES_DIR . 'module/',
