@@ -25,6 +25,9 @@ Any version of beaver builder.
 
 == Change Log ==
 
+= 1.0.4 =
+Add href to list.
+
 = 1.0.3 =
 Added typography css of the pagination.
 
