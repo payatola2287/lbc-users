@@ -38,6 +38,9 @@
     $user_meta = get_user_meta( $user->ID );
   ?>
     <li class="user-box">
+      <figure class="user-avatar">
+        <?php echo get_wp_user_avatar( $user->ID,'medium' ); ?>
+      </figure>
       <?php if( 'box' == $settings->link_type ): ?>
           <a href="<?php echo trailingslashit( get_site_url() ) . 'profile/?email=' . $user->user_email ; ?>" title="Go to profile">
       <?php endif; ?>

@@ -25,6 +25,10 @@ Any version of beaver builder.
 
 == Change Log ==
 
+= 1.0.5 =
+Add profile avatar using WP User Avatar.
+Made the profiles responsive.
+
 = 1.0.4 =
 Add href to list.
 

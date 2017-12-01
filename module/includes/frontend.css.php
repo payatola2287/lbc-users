@@ -27,12 +27,7 @@
 
 }
 .fl-node-<?php echo $id; ?> .user-box{
-  <?php if( count( $margins ) == 1 ): ?>
-    width: <?php echo 100 / intval( $settings->column_count ); ?>%;
-  <?php elseif( count( $margins ) < 4 && count( $margins ) > 1 ): ?>
-    width: calc( <?php echo 100 / intval( $settings->column_count ); ?>% - ( <?php echo $side_margins; ?> * 2 ) );
-  <?php endif; ?>
-
+  width: 100%;
   <?php if( 'none' != $settings->border_type ): ?>
     border: <?php echo $settings->border_width; ?> <?php echo $settings->border_type; ?> #<?php echo $settings->border_color; ?>;
   <?php endif; ?>
@@ -124,6 +119,13 @@ transition: color 0.3s linear, background 0.3s ease-in;
   .fl-node-<?php echo $id; ?> .user-button{
     font-size: <?php echo ( $settings->med_button_font_size == '' ) ? $settings->button_font_size : $settings->med_button_font_size; ?>;
   }
+  .fl-node-<?php echo $id; ?> .user-box{
+    <?php if( count( $margins ) == 1 ): ?>
+      width: <?php echo 100 / intval( $settings->column_count ); ?>%;
+    <?php elseif( count( $margins ) < 4 && count( $margins ) > 1 ): ?>
+      width: calc( <?php echo 100 / intval( $settings->column_count ); ?>% - ( <?php echo $side_margins; ?> * 2 ) );
+    <?php endif; ?>
+  }
 }
 @media screen and (min-width:<?php echo $global_settings->medium_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .user-name{
@@ -132,4 +134,5 @@ transition: color 0.3s linear, background 0.3s ease-in;
   .fl-node-<?php echo $id; ?> .user-button{
     font-size: <?php echo $settings->button_font_size; ?>;
   }
+
 }
