@@ -2,7 +2,7 @@
 /**
  * Plugin Name: User List Add on
  * Description: Add-on for beaver builder to display members.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: Paolo Gallardo
  * Author URI: http://www.paologallardo.com
  */

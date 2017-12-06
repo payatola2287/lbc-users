@@ -40,6 +40,18 @@ class LBCUSettings{
                   )
                 )
               ),
+              'show_designation' => array(
+                'label' => __( 'Show Designation','fl-builder' ),
+                'type' => 'select',
+                'options' => array(
+                  'yes' => __( 'Yes','fl-builder' ),
+                  'no' => __( 'No','fl-builder' )
+                ),
+                'default' => 'yes',
+                'toggle' => array(
+                  'sections' => array( 'designation-style-section','designation-typo-section' )
+                )
+              ),
               'link_type' => array(
                 'label' => __( 'Link Type' ,'fl-builder' ),
                 'type' => 'select',
@@ -103,6 +115,16 @@ class LBCUSettings{
                 'default' => __( 'Go to profile','fl-builder' )
               )
             )
+          ),
+          'bio-gen-section' => array(
+            'title' => __( 'Description','fl-builder' ),
+            'fields' => array(
+              'trim_bio_count' => array(
+                'type' => 'text',
+                'label' => __( 'Number of Words','fl-builder' ),
+                'default' => '15'
+              )
+            )
           )
         )
       ),
@@ -125,6 +147,22 @@ class LBCUSettings{
                 'preview' => array(
                   'type' => 'css',
                   'selector' => '.user-name',
+                  'property' => 'color'
+                )
+              )
+            )
+          ),
+          'designation-style-section' => array(
+            'title' => __( 'Designation','fl-builder' ),
+            'fields' => array(
+              'designation_color' => array(
+                'type' => 'color',
+                'label' => __( 'Color','fl-builder' ),
+                'default' => '000',
+                'show_reset' => true,
+                'preview' => array(
+                  'type' => 'css',
+                  'selector' => '.user-designation',
                   'property' => 'color'
                 )
               )
@@ -315,6 +353,27 @@ class LBCUSettings{
               )
             )
           ),
+          'designation-typo-section' => array(
+            'title' => __( 'Designation','fl-builder' ),
+            'fields' => array(
+              'designation_font' => array(
+                'type' => 'font',
+                'label' => __( 'Font','fl-builder' ),
+                'default' => array(
+                  'family' => 'Default'
+                )
+              ),
+              'designation_font_size' => array(
+                'type' => 'text',
+                'label' => __( 'Font Size','fl-builder' ),
+                'default' => '16px'
+              ),
+              'designation_text_line_height' => array(
+                'type' => 'text',
+                'label' => __( 'Line Height','fl-builder' )
+              )
+            )
+          ),
           'content-typo-section' => array(
             'title' => __( 'Description','fl-builder' ),
             'fields' => array(
@@ -395,6 +454,16 @@ class LBCUSettings{
                 'label' => __( 'Name Line Height','fl-builder' ),
                 'default' => ''
               ),
+              'med_des_font_size' => array(
+                'type' => 'text',
+                'label' => __( 'Designation Font Size','fl-builder' ),
+                'default' => ''
+              ),
+              'med_des_line_height' => array(
+                'type' => 'text',
+                'label' => __( 'Designation Line Height','fl-builder' ),
+                'default' => ''
+              ),
               'med_content_font_size' => array(
                 'type' => 'text',
                 'label' => __( 'Description Font Size','fl-builder' ),
@@ -433,6 +502,16 @@ class LBCUSettings{
               'sm_name_line_height' => array(
                 'type' => 'text',
                 'label' => __( 'Name Line Height','fl-builder' ),
+                'default' => ''
+              ),
+              'sm_designation_font_size' => array(
+                'type' => 'text',
+                'label' => __( 'Designation Font Size','fl-builder' ),
+                'default' => ''
+              ),
+              'sm_designation_line_height' => array(
+                'type' => 'text',
+                'label' => __( 'Designation Line Height','fl-builder' ),
                 'default' => ''
               ),
               'sm_content_font_size' => array(

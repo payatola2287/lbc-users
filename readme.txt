@@ -25,6 +25,11 @@ Any version of beaver builder.
 
 == Change Log ==
 
+= 1.0.6 =
+Added designation
+Added designation settings
+Added trim to the description or bio
+
 = 1.0.5 =
 Add profile avatar using WP User Avatar.
 Made the profiles responsive.

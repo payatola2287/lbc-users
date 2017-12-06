@@ -54,6 +54,13 @@
   line-height: <?php echo ( $settings->name_text_line_height == '' ) ? 1.3:$settings->name_text_line_height ; ?>;
   color: #<?php echo $settings->name_color; ?>;
 }
+.fl-node-<?php echo $id; ?> .user-designation{
+  color: #<?php echo $settings->designation_color; ?>;
+  font-size: <?php echo $settings->sm_designation_font_size; ?>;
+  line-height: <?php echo $settings->sm_designation_line_height; ?>;
+  font-family: <?php echo ( 'Default' == $settings->designation_font['family'] ) ? 'inherit': $settings->designation_font['family']; ?>;
+  font-weight: <?php echo ( 'Default' == $settings->designation_font['weight'] ) ? 'inherit':$settings->designation_font['weight'] ; ?>;
+}
 .fl-node-<?php echo $id; ?> .user-button{
   background-color: #<?php echo $settings->button_background_color; ?>;
   font-size: <?php echo ( $settings->sm_button_font_size == '' ) ? ( $settings->med_button_font_size == '' ) ? $settings->button_font_size : $settings->med_button_font_size : $settings->sm_button_font_size; ?>;
@@ -119,6 +126,10 @@ transition: color 0.3s linear, background 0.3s ease-in;
   .fl-node-<?php echo $id; ?> .user-button{
     font-size: <?php echo ( $settings->med_button_font_size == '' ) ? $settings->button_font_size : $settings->med_button_font_size; ?>;
   }
+  .fl-node-<?php echo $id; ?> .user-designation{
+    font-size: <?php echo $settings->med_des_font_size; ?>;
+    line-height: <?php echo $settings->med_des_line_height; ?>;
+  }
   .fl-node-<?php echo $id; ?> .user-box{
     <?php if( count( $margins ) == 1 ): ?>
       width: <?php echo 100 / intval( $settings->column_count ); ?>%;
@@ -130,6 +141,10 @@ transition: color 0.3s linear, background 0.3s ease-in;
 @media screen and (min-width:<?php echo $global_settings->medium_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .user-name{
     font-size: <?php echo $settings->name_font_size; ?>;
+  }
+  .fl-node-<?php echo $id; ?> .user-designation{
+    font-size: <?php echo $settings->designation_font_size; ?>;
+    line-height: <?php echo $settings->designation_text_line_height; ?>;
   }
   .fl-node-<?php echo $id; ?> .user-button{
     font-size: <?php echo $settings->button_font_size; ?>;

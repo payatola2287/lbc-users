@@ -38,16 +38,21 @@
     $user_meta = get_user_meta( $user->ID );
   ?>
     <li class="user-box">
-      <figure class="user-avatar">
-        <?php echo get_wp_user_avatar( $user->ID,'medium' ); ?>
-      </figure>
       <?php if( 'box' == $settings->link_type ): ?>
           <a href="<?php echo trailingslashit( get_site_url() ) . 'profile/?email=' . $user->user_email ; ?>" title="Go to profile">
       <?php endif; ?>
+      <figure class="user-avatar">
+        <?php echo get_wp_user_avatar( $user->ID,'medium' ); ?>
+      </figure>
       <<?php echo $settings->name_tag; ?> class="user-name"><?php echo $user_meta[ 'first_name' ][0] . ' ' . $user_meta[ 'last_name' ][0]; ?></<?php echo $settings->name_tag; ?>>
+      <?php if( 'yes' == $settings->show_designation && '' != $user_meta['designation'][0] ): ?>
+        <p class="user-designation">
+          <?php echo __( $user_meta['designation'][0],'fl-builder' ); ?>
+        </p>
+      <?php endif; ?>
       <?php if( 'yes' == $settings->mem_content ): ?>
         <p class="user-desc">
-          <?php echo apply_filters( 'the_content',$user_meta[ 'description' ][0] ); ?>
+          <?php echo wp_trim_words( apply_filters( 'the_content',$user_meta[ 'description' ][0] ), intval( $settings->trim_bio_count ) ); ?>
         </p>
       <?php endif; ?>
       <?php if( 'button' == $settings->link_type ): ?>
